@@ -21,7 +21,7 @@ body{
    
  }
 
-main{
+.mainparents{
     display:flex ;
     background-color: rgb(209, 155, 19);
     box-shadow: -10px -10px 31px  rgb(245, 72, 41) inset,
