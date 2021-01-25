@@ -10,7 +10,7 @@ body{
 #home-container{
    display: flex;
     height:100vh;
-    background-image: url(https://media.giphy.com/media/RHIKETUlUINYvV7CAO/giphy.gif);
+    
     flex-wrap: wrap;
     height: 100vh;
     width: 100%;
@@ -18,7 +18,7 @@ body{
     z-index: 1;
     justify-content: center;
     align-items: center;
-   
+    background-image: url(https://media.giphy.com/media/RHIKETUlUINYvV7CAO/giphy.gif);
  }
 
 .mainparents{
@@ -34,10 +34,6 @@ body{
     top:160px;
     border-radius:6px;
    
-  
-    /* flex-flow: column wrap; */
-    
-    
 }
 .mainchild{ /*kutulari alt alta getiremedim, iki kutu ust uste geldi, topla indirdim*/
     display: flex;
@@ -58,6 +54,13 @@ header {
   
 
 }
+/*animater dan aldim bunu fakat sayfama uyarlayamadim nasil yapiyorduk acaba*/
+.scale-in-center {
+	-webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
 section {
    
     height:200px;
@@ -112,38 +115,54 @@ a{
 
   
 #portfolyo-container{
-    width:100%;
     height:100vh;
+    width: 100%;
     background-color:  black;
-    margin:0;
-    display: flex;
-    flex-direction: row-reverse;
+    margin-top:0;
+    display:  flex;
+    justify-content: space-evenly;
     align-items: center;
-    justify-content: space-around;
-    position: relative;  
- }
- .child{
-    height: 60%;
    
-    padding: 20px;
-    margin:40px;
-    flex-basis: 350px;
-    border-radius: 16px;  
-    background: linear-gradient(315deg, tomato);
-    box-shadow:  -10px -10px 31px  rgb(245, 72, 41) inset,
-             10px 10px 31px  rgb(245, 72, 41) inset;
   
  }
- .box1{   
+ 
+ .child{
+     width: 20%;
+     height: 60%;
+     border-radius: 16px;  
+     background: linear-gradient(315deg, tomato);
+     box-shadow:  -10px -10px 31px  rgb(245, 72, 41) inset,
+             10px 10px 31px  rgb(245, 72, 41) inset;   
+    display: flex;
+    flex-direction: column;
+    position: relative;
     
+    justify-content: flex-end;
     
+            }
+
+    .child p, h4{
+        width:80%;
+        color:black;
+        font-weight: bold;
+        margin-left :15px;
+        
+     }   
+     
+ .box1{  
+    background-image: url(img/flat.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+     
  }
+ 
 
 /* .underwrite::after {
     content: "boxesHouse";*/
  
- .box2{
-    background-image: url(img/avataaars.png);
+ .box2 {
+ 
+    background-image: url(img/winner.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100% ;
     
@@ -152,33 +171,11 @@ a{
     background-image: url(img/pinkfon.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100% ;
-   
-}
-.par1{
     
-    display:flex;
-    position: absolute;
-    top:550px;
-    right:130px;
-    color: seashell;
 }
-.par2{
-    
-    display:flex;
-    position: absolute;
-    top:550px;
-    right:520px;
-    color: seashell;
-}
-.par3{
-    
-    display:flex;
-    position: absolute;
-    top:550px;
-    left:150px;
-    color: seashell;
-}
- 
+
+
+
 @media (max-width:760px) {
     #portfolyo-container{
         flex-direction: column;
